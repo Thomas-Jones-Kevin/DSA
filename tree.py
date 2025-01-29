@@ -76,12 +76,14 @@ def bfs(root):
     queue = deque()
     queue.append(root)
     while queue:
-        node = queue.popleft()
-        print(node.val)
-        if node.left:
-            queue.append(node.left)
-        if node.right:
-            queue.append(node.right)
+        a = len(queue)
+        for i in range(a):
+            node = queue.popleft()
+            print(node.val)
+            if node.left:
+                queue.append(node.left)
+            if node.right:
+                queue.append(node.right)
 
 print("BFS : ")
 bfs(A)
